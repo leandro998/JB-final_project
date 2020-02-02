@@ -4,16 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/849db05d92.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <script src="./jb.js"></script>
     <title>JB-final_project</title>
 </head>
 <body>
-    <h1 id="title_jb">JB</h1>
-    <section id="home"></section>
-    <section id="first"></section>
-    <section id="second"></section>
-    <section id="third"></section>
-    <section id="fourth"></section>
-    <section id="fifth"></section>
-
+    <nav>
+        <div id="menu_bar">
+            <div id="menu" onclick="menu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Buble Sort</a></li>
+            <li><a href="#">Merge Sort</a></li>
+            <li><a href="#">Quick Sort</a></li>
+            <li><a href="#">Insert Sort</a></li>
+            <li><a href="#">Selection Sort</a></li>
+        </ul>
+        <div class="menu_bg" id="menu_bg"></div>
+        <div class="btn_home">
+            <div class="btn_box">
+                <li><a href="#" onclick="sign_up()">Sign</a></li>
+            </div>
+            <div class="btn_box">
+                <li><a href="#" onclick="login()">Login</a></li>
+            </div>
+            <div class="btn_content">
+                <div class="btn_content_box" id="sign">
+                    <h3>User name</h3>
+                    <input type="text">
+                    <h3>E-mail</h3>
+                    <input type="email"> 
+                    <h3>Password</h3>
+                    <input type="password">
+                    <p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>                 
+                    <button>Sign-up</button>
+                </div> 
+                <div class="btn_content_box" id="login">
+                    <h3>E-mail</h3>
+                    <input type="email"> 
+                    <h3>Password</h3>                   
+                    <input type="password"> 
+                    <a href="#">Forgot password?</a>              
+                    <button>Login</button>
+                </div> 
+            </div>
+        </div>
+        
+    </nav>
+    <main>
+        <div class="title_home">
+            <h1>JB-EXPERT</h1>
+        </div>      
+        <div class="box_card" id="middle">
+            <div class="card_front">
+                <img class="banner_img" src="./images/background-JB_Expert.jpg" alt="JB-EXPERT_img">
+            </div>
+            <div class="card_back">
+                <div class="card_back_content" id="middle">
+                    <h2>JB-EXPERT</h2>
+                    <span>Youtube Channel</span>
+                    <div class="card_links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h3>JB-EXPERT Web Site copyright &copy; 2020</h3>
+        </div>
+    </footer>
 </body>
 </html>
