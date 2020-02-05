@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/849db05d92.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
-    <script src="./jb.js"></script>
-    <title>JB-final_project</title>
+    <title>JB-EXPERT</title>
 </head>
 <body>
     <nav>
@@ -30,31 +29,35 @@
         </ul>
         <div class="menu_bg" id="menu_bg"></div>
         <div class="btn_home">
-            <div class="btn_box">
-                <li><a href="#" onclick="sign_up()">Sign</a></li>
+            <div class="btn_box1">
+                <li><a href="#" >Sign</a></li>
             </div>
-            <div class="btn_box">
-                <li><a href="#" onclick="login()">Login</a></li>
-            </div>
+            <div class="btn_box2">
+                <li><a href="#" >Login</a></li>
+            </div>          
             <div class="btn_content">
-                <div class="btn_content_box" id="sign">
+                <div class="btn_content_box1" id="sign">
+                    <div class="btn_closebox1">X</div>
                     <h3>User name</h3>
                     <input type="text">
                     <h3>E-mail</h3>
                     <input type="email"> 
                     <h3>Password</h3>
                     <input type="password">
-                    <p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>                 
+                    <p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>           
+                    <a href="#">Forgot password?</a>      
                     <button>Sign-up</button>
                 </div> 
-                <div class="btn_content_box" id="login">
-                    <h3>E-mail</h3>
+                <div class="btn_content_box2" id="login">
+                    <div class="btn_closebox2">X</div>
+                    <h3>User name / E-mail</h3>
                     <input type="email"> 
                     <h3>Password</h3>                   
                     <input type="password"> 
                     <a href="#">Forgot password?</a>              
                     <button>Login</button>
                 </div> 
+                <script src="./jb.js"></script>
             </div>
         </div>
         
@@ -80,6 +83,7 @@
                 </div>
             </div>
         </div>
+        <img src="./images/banner.jpg" alt="banner" class="banner2_img">
     </main>
     <footer>
         <div class="footer">
