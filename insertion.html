@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-=======
->>>>>>> 26ea3d077b2f13e5674db6ea15bb29ccca4b9910
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>insertion</title>
 </head>
-<<<<<<< HEAD
 
 <body>
     <h3>type a random array separated by comma <input type="text" id="is_input"></h3>
@@ -61,35 +56,4 @@
     </script>
 </body>
 
-=======
-<body>
-    <h2 id="output"></h2>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <input type="number" id="num3">
-    <input type="number" id="num4">
-    <input type="number" id="num5">
-    <button onclick="result();">Start</button>
-    <h1>Insertion Sort</h1>
-    <p>Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.</p>
-    <img src="./images/insertion-sort.png" alt="photo">
-    <script>
-        function result(){
-            var a = [parseInt(document.getElementById("num1").value),parseInt(document.getElementById("num2").value),parseInt(document.getElementById("num3").value),parseInt(document.getElementById("num4").value),parseInt(document.getElementById("num5").value)];
-        for(var i = 1; i<a.length; i++){
-            var tmp = a[i];
-        for(var j = i-1; j>=0; j--){
-            if(a[j]>tmp){
-                a[j+1] = a[j];
-        }else{
-            break;
-        }
-        }
-                a[j+1] = tmp;
-            document.getElementById("output").innerHTML = a;
-        }   
-        }
-    </script>
-</body>
->>>>>>> 26ea3d077b2f13e5674db6ea15bb29ccca4b9910
 </html>
