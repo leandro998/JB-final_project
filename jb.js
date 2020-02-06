@@ -18,7 +18,6 @@ btnMenubox1.addEventListener('click', () => {
     if(boxOpen1 == false & boxOpen2 == false) {
         btn_content_box1.classList.add('btn_box1_open');
         boxOpen1 = true;
-        // boxOpen2 = false;
     } 
     else if (boxOpen2 == true) {
         btn_content_box2.classList.remove('btn_box2_open');
@@ -31,7 +30,6 @@ btnMenubox1.addEventListener('click', () => {
 btnMenubox2.addEventListener('click', () => {
     if(boxOpen1 == false & boxOpen2 == false) {
         btn_content_box2.classList.add('btn_box2_open');
-        // boxOpen1 = false;
         boxOpen2 = true;
     } 
     else if (boxOpen1 == true) {

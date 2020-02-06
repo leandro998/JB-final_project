@@ -6,12 +6,28 @@
 body {
     font-family: 'PT Sans', sans-serif;
     background-color: #373c56;
+    /* overflow: hidden; */
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    margin: auto;
+}
+.nav_bar{
+    position:relative;
+    top:0px;
+    left:0px;
+}
+.nav_bar #menu_bar {
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 3vh;
+    position: relative;
+    background-color:rgba(255,255,255,0);
 }
 
 #menu {
@@ -50,13 +66,13 @@ footer {
 
 .nav li a{
     color:#fff;
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: bold;
     text-decoration: none;
 }
 
 .nav li a:hover {
-    font-size: 1.8em;
+    font-size: 1.5vw;
     text-shadow:  0px 3px 7px #000000;
 }
 
@@ -84,8 +100,8 @@ footer {
 }
  
 .change_bg {
-    width: 550px;
-    height: 540px;
+    width: 30vw;
+    height: 55vh;
     transform: translate(-50%, -5%);
 }
 
@@ -114,18 +130,18 @@ footer {
 }
 
 .btn_home {
-    top:20px;
+    top:0px;
     right: 0px;
     position: absolute;
     list-style: none;
     display: flex;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .btn_box1, .btn_box2 {
     display: flex;
     margin: 5px 15px;
-    font-size: 20px;
+    font-size: 1.2vw;
     font-family: 'Black Ops One', cursive;
     align-items: center;
     border-radius: 50px;
@@ -140,7 +156,7 @@ footer {
 
 .btn_box1 a:hover, .btn_box2 a:hover {
     color: #e94498;
-    font-size: 25px;
+    font-size: 1.3vw;
     text-shadow:  0px 5px 5px #000000;
 }
 
@@ -245,7 +261,7 @@ h3 {
     width: 7vw;
     height: 4vh;
     color: white;
-    font-size: 1.2em;
+    font-size: 1vw;
     margin-top: 50px;
     border-radius: 25px;
     background-color:#2c3e50;
@@ -264,6 +280,7 @@ h3 {
     color: whitesmoke;
     text-shadow:  0px 10px 10px #000000;
     font-size: 2vw;
+    z-index: 1000;
 }
 
 #middle {
@@ -275,12 +292,12 @@ h3 {
 
 .box_card {
     cursor:pointer ; 
-    width: 35vw;
+    width: 40vw;
     height: 50vh;  
 }
 
 .card_front, .card_back {
-    width: 35vw;
+    width: 40vw;
     height: 50vh;
     overflow: hidden;
     position: absolute;
@@ -331,7 +348,7 @@ h2{
     width: 60px ;
     height: 60px;
     color: #2c3e50;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     transition: 0.4s;
     justify-content: center;
     align-items: center;
@@ -371,7 +388,46 @@ h2{
     color:#2c3e50; 
 }
 
-@media all and (max-width: 1024px){
+.box_sort_content {
+    position:relative;
+    top:0px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.sort_content {
+    /* position: relative;
+    top:53%;
+    left:50%;
+    transform: translate(-50%, -50%);     */
+    width:65vw;
+    height:auto;
+    background-color: #fff;
+    border: #636363 1px solid;
+    margin: 50px 0;
+   
+
+}
+
+.sort_content img {
+    width:40vw;
+    height:40vh;
+}
+
+iframe {
+    width:30vw;
+    height:40vh;
+}
+
+@media all and (max-width: 650px){
+    body {
+        overflow: hidden;
+    }
     .card_front, .card_back {
         display: none;
 
@@ -388,6 +444,7 @@ h2{
         animation-name: title;
         animation-duration: 3.5s;
         transition: ease;
+        z-index: 1000;
     }
 
     @keyframes title {
@@ -396,14 +453,15 @@ h2{
             font-size: 2vw;
         }
         to {
-            transform: translatey(620px);
+            transform: translatey(670px);
             font-size: 6vw;
         }
     }
 
     .title_home{
-        transform: translatey(620px);
+        transform: translatey(670px);
         font-size: 6vw;
+        z-index: 1000;
     }
 
     .btn_content_box1, .btn_content_box2 {
@@ -429,11 +487,9 @@ h2{
 
     @keyframes banner {
         from { 
-            /* width: 0; */
             transform: translateX(-500px) rotate(35deg);
         }
         to {
-            /* width: 120vw; */
             transform: translateX(0px) rotate(35deg);
         };
 
@@ -441,6 +497,7 @@ h2{
 
     .banner2_img {
         display:block;
+        z-index: 0;
     }
 
 
@@ -452,13 +509,24 @@ h2{
     h3 {
         font-size: 4vw;
     }
-    
+    .btn_box1, .btn_box2 {
+        font-size: 3vw;
+    }
+    .btn_box1 a:hover, .btn_box2 a:hover {
+        font-size: 3.5vw;
+    }
+
     .btn_content_box1 p, .btn_content_box2 p {
         width: 60vw;
         font-size: 4vw;   
     }
+
+    .btn_content_box1 a, .btn_content_box2 a {
+        font-size: 4vw;   
+    }
     
     .btn_content_box1 button, .btn_content_box2 button {
+        font-size: 3vw;
         width: 30vw;
         height: 4vh;
     }
@@ -468,6 +536,28 @@ h2{
         right: 6vw;
         width: 8vw;
     }
+    
+    .change_bg {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .nav {
+        margin: 6vh 2vh;
+    }
+
+    .nav li{
+        padding: 1.3vh 0;
+    }
+    
+    .nav li a{
+        font-size: 3vw;
+    }
+
+    .nav li a:hover {
+        font-size: 3.5vw;
+    }
+
     
 
 }
