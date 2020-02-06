@@ -7,33 +7,52 @@
     <title>selection</title>
 </head>
 <body>
-    <h2 id="output"></h2>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <input type="number" id="num3">
-    <input type="number" id="num4">
-    <input type="number" id="num5">
-    <button onclick="result();">Start</button>
+    <h3>type a random array separated by comma <input type="text" id="is_input"></h3>
+    <h2 id="is_output"></h2>
+    <button onclick="callSelectionSort();">Selection Sort</button>
+
     <h1>Selection Sort</h1>
     <p>Selection sort is one of the sorting algorithms. Search for the maximum or minimum value from the arrayed elements and replace them with the last element in the array.</p>
+    <h3>How to Selection Sort works?</h3>
+    <p>Step1:The first element of the list is the temporary maximum value.<br>
+       Step2:Look at the second and subsequent elements one by one, and if they are greater than the tentative maximum, remember that number.<br>
+       Step3:After the process has been completed, if there is a second or subsequent one that is equal to or smaller than the provisional minimum value, the element is replaced with the first element.<br>
+       Step4:After that, the same process is repeated until the end.
+    </p>
     <img src="./images/selection-short.png" alt="photo">
     <script>
-        function result(){
-            var a = [parseInt(document.getElementById("num1").value),parseInt(document.getElementById("num2").value),parseInt(document.getElementById("num3").value),parseInt(document.getElementById("num4").value),parseInt(document.getElementById("num5").value)];
-        for(var i = 0; i<a.length-1;i++){
-            var min = a[i];
-            var k = i;
-        for(var j = i+ 1; j<a.length;j++){
-            if(min >a[j]){
-                min = a[j];
-                k = j;
+        function Selection_Sort(arr, compare_Function) {
+
+        function compare(a, b) {
+            return a - b;
+        } 
+            var min = 0;
+            var index = 0;
+            var temp = 0;
+        //{Function} compare_Function Compare function
+            compare_Function = compare_Function || compare;
+            for (var i = 0; i < arr.length; i += 1) {
+            index = i;
+            min = arr[i];
+            for (var j = i + 1; j < arr.length; j += 1) {
+                if (compare_Function(min, arr[j]) > 0) {
+                min = arr[j];
+                index = j;
         }
         }
-            var tmp = a[i];
-                a[i] = a[k];
-                a[k] = tmp;
-            document.getElementById("output").innerHTML = a;
+            temp = arr[i];
+            arr[i] = min;
+            arr[index] = temp;
         }
+        //return sorted arr
+            return arr;
+        }
+        function callSelectionSort() {
+            let user_input = document.getElementById("is_input").value;
+            let array_input = user_input.split(",").map(elem => parseInt(elem, 10));
+            let sortedArray = Selection_Sort(array_input);
+            document.getElementById("is_output").innerHTML = "The sorted array is: " + sortedArray;
+            console.log(sortedArray);
         }
     </script>
 </body>

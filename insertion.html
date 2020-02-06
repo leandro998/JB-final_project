@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>insertion</title>
 </head>
+
 <body>
-    <h2 id="output"></h2>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <input type="number" id="num3">
-    <input type="number" id="num4">
-    <input type="number" id="num5">
-    <button onclick="result();">Start</button>
+    <h3>type a random array separated by comma <input type="text" id="is_input"></h3>
+    <h2 id="is_output"></h2>
+    <button onclick="callInsertionSort();">Insertion Sort</button>
+
     <h1>Insertion Sort</h1>
-    <p>Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.</p>
+    <p>Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It
+        is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+    </p><br>
+    <h3>How to Insertion Sort works?</h3>
+    <p>Step1:From the top, the first two elements are sorted and compared.<br>
+        Step2:If the first element is larger than the second element then change the locations.<br>
+        Step3:Next, compare the third element with the two sorted elements and insert them at the appropriate
+        locations.<br>
+        Step4:After that, the same process is repeated until the end.
+    </p>
     <img src="./images/insertion-sort.png" alt="photo">
     <script>
-        function result(){
-            var a = [parseInt(document.getElementById("num1").value),parseInt(document.getElementById("num2").value),parseInt(document.getElementById("num3").value),parseInt(document.getElementById("num4").value),parseInt(document.getElementById("num5").value)];
-        for(var i = 1; i<a.length; i++){
-            var tmp = a[i];
-        for(var j = i-1; j>=0; j--){
-            if(a[j]>tmp){
-                a[j+1] = a[j];
-        }else{
-            break;
+        function Insertion_Sort(arr) {
+            for (var i = 1; i < arr.length; i++) {
+            if (arr[i] < arr[0]) {
+        //move current element to the first position
+                arr.unshift(arr.splice(i, 1)[0]);
+        }
+            else if (arr[i] > arr[i - 1]) {
+            continue;//leave current element where it is
+        }
+            else {
+        //find where element should go
+            for (var j = 1; j < i; j++) {
+            if (arr[i] > arr[j - 1] && arr[i] < arr[j]) {
+        //move element
+                arr.splice(j, 0, arr.splice(i, 1)[0]);
         }
         }
-                a[j+1] = tmp;
-            document.getElementById("output").innerHTML = a;
-        }   
+        }
+        }
+            return arr;
+        }
+        function callInsertionSort() {
+            let user_input = document.getElementById("is_input").value;
+            let array_input = user_input.split(",").map(elem => parseInt(elem, 10));
+            let sortedArray = Insertion_Sort(array_input);
+            document.getElementById("is_output").innerHTML = "The sorted array is: " + sortedArray;
+            console.log(sortedArray);
         }
     </script>
 </body>
+
 </html>
