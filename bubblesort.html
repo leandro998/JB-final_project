@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,21 @@
 
 <body>
     <div class="bubble_contents">
-    <div class="bubblesort_content">
-        <h3>About Bubble Sort</h3>
-        <p>It is the sorting algorithm that performs by repeated sorts of an array element by comparing the adjacent elements. It compares the adjacent element and it swaps the element if they are in the wrong order. This algorithm runs repeatedly until all the elements in the lists are sorted. If all the elements sorted in the list, then the algorithms end automatically. Although the bubble sort algorithm is simple, it consumes more time comparing other sorting techniques. </p>
+        <div class="bubblesort_content">
+            <h3>About Bubble Sort</h3>
+            <p>It is the sorting algorithm that performs by repeated sorts of an array element by comparing the adjacent elements. It compares the adjacent element and it swaps the element if they are in the wrong order. This algorithm runs repeatedly until all the elements in the lists are sorted. If all the elements sorted in the list, then the algorithms end automatically. Although the bubble sort algorithm is simple, it consumes more time comparing other sorting techniques. </p>
+        </div>
+
+        <div class="bubblesort_how">
+            <h3>How does Bubble Sort works?</h3>
+            <p>Step1: The first step of Bubble sort is to compare the first two elements, and swaps if they are in the wrong order. Since, these elements are already in order, algorithm does not swap numbers.</p>
+            <p>Step2: After the array is already sorted, the algorithm needs one whole pass without any swap to know it is sorted.</p>
+        </div>
+        <img src="images/bubblesort_photo.png" alt="bubbleSort_example" style="width: 30vw; height: 30vh;">
     </div>
 
-    <div class="bubblesort_how">
-        <h3>How does Bubble Sort works?</h3>
-        <p>Step1: The first step of Bubble sort is to compare the first two elements, and swaps if they are in the wrong order. Since, these elements are already in order, algorithm does not swap numbers.</p>
-        <p>Step2: After the array is already sorted, the algorithm needs one whole pass without any swap to know it is sorted.</p>
-    </div>
-    <img src="images/bubblesort_photo.png" alt="bubbleSort_example" style="width: 30vw; height: 30vh;">
-    </div>
-    
-    
     <!-- <input type="text" id="section_bubblesort_input"> -->
-    
+
     <input type="text" id="bubble_sort_input" placeholder="Type 5 numbers with comma">
     <br>
     <br>
@@ -34,30 +34,29 @@
     <h3 id="bubble_output">Result: </h3>
 
     <script>
-    function section_bubbleSort(){
-        let bubbleSort = (arr) => {
+        function section_bubbleSort() {
+            let bubbleSort = (arr) => {
 
-            let n = arr.length;
+                let n = arr.length;
 
-            for(let i = 0; i < n - 1; i++){
-                for(let j =0; j <= n - i - 1; j++){
-                    if(arr[j] > arr[j + 1]){
-                        [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+                for (let i = 0; i < n - 1; i++) {
+                    for (let j = 0; j <= n - i - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                            [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                        }
                     }
                 }
+                return arr;
             }
-            return arr;
+            let user_input = document.getElementById('bubble_sort_input').value
+            let numbers = user_input.split(',').map(elem => parseInt(elem, 10))
+                // first call to bubble sort
+            let sortedArray = bubbleSort(numbers)
+            document.getElementById('bubble_output').innerHTML = "Result: " + sortedArray;
+            // console.log(sortedArray);
         }
-    let user_input = document.getElementById('bubble_sort_input').value
-    let numbers = user_input.split(',').map(elem => parseInt(elem, 10))
-    // first call to bubble sort
-    let sortedArray = bubbleSort(numbers)
-    document.getElementById('bubble_output').innerHTML = "Result: " + sortedArray;
-    // console.log(sortedArray);
-    }
-
-    
     </script>
 
 </body>
+
 </html>
