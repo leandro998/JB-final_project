@@ -1,7 +1,3 @@
-// This start quick sort
-
-var items = [5,3,7,6,2,9,11,-1,0]; //this is the array that will be sorted, we can make it by input
-// var items = document.getElementById("qs_array").innerHTML;
 
 function swap(items, leftIndex, rightIndex){
     var temp = items[leftIndex];
@@ -41,8 +37,13 @@ function quickSort(items, left, right) {
     }
     return items;
 }
-// first call to quick sort
-var sortedArray = quickSort(items, 0, items.length - 1);
-console.log(sortedArray); //print the sorted array
 
-// document.getElementById("qs_output").innerHTML = sortedArray;
+// first function to be called, after the input from the user
+
+function callQuickSort () {
+    let user_input = document.getElementById("qs_array_input").value
+    let items = user_input.split(",").map(elem => parseInt(elem, 10))
+    let sortedArray = quickSort(items, 0, items.length - 1)
+    document.getElementById("qs_output").innerHTML = "The sorted array is: " + sortedArray;
+    console.log(sortedArray);
+}

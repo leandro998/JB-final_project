@@ -9,10 +9,8 @@
 </head>
 <body>
     <div id="div_qs_input"></div>
-        <h3>
-            <input type="var" id="qs_array" value="5,3,7,6,2,9,11,-1,0">
-        </h3>
-        <button onclick="quickSort();">Quick Sort</button>
+        <h5>type a random array separated by comma <input type="text" id="qs_array_input"></h5>
+        <button onclick="callQuickSort();">Quick Sort</button>
         <h3 id="qs_output"></h3>
     </div>
 
@@ -29,6 +27,7 @@
             Step 3: Finally, perform the same operations on left and right side elements to the pivot element.
         </p>
         <img src="quicksort_example.png" alt="quicksort_example">
-    </div>  
+    </div> 
+    <script src="quicksort.js"></script>
 </body>
 </html>

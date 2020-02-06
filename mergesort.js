@@ -1,6 +1,7 @@
-const list = [23, 4, 42, 15, -1, 16, 0, 8, 3]
+// const list = [23, 4, 42, 15, -1, 16, 0, 8, 3]
 // const list = document.getElementById("ms_array").innerHTML;
 // first it starts calling function mergeSort
+
 const mergeSort = (list) =>{
   if(list.length <= 1) return list;
   const middle = list.length / 2 ;
@@ -28,4 +29,12 @@ const merge = (left, right) => {
   // return document.getElementById("ms_output").innerHTML = result;
 }
 
-console.log(mergeSort(list)) // [ 3, 4, 8, 15, 16, 23, 42 ]
+function callMergeSort () {
+  let user_input = document.getElementById("ms_array_input").value
+  let list = user_input.split(",").map(elem => parseInt(elem, 10))
+  let sortedArray = mergeSort(list)
+  document.getElementById("ms_output").innerHTML = "The sorted array is: " + sortedArray;
+  console.log(sortedArray);
+}
+
+// console.log(mergeSort(list)) // [ 3, 4, 8, 15, 16, 23, 42 ]
