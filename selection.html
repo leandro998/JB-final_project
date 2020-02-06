@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selection</title>
+</head>
+<body>
+    <h2 id="output"></h2>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="number" id="num3">
+    <input type="number" id="num4">
+    <input type="number" id="num5">
+    <button onclick="result();">Start</button>
+    <h1>Selection Sort</h1>
+    <p>Selection sort is one of the sorting algorithms. Search for the maximum or minimum value from the arrayed elements and replace them with the last element in the array.</p>
+    <img src="./images/selection-short.png" alt="photo">
+    <script>
+        function result(){
+            var a = [parseInt(document.getElementById("num1").value),parseInt(document.getElementById("num2").value),parseInt(document.getElementById("num3").value),parseInt(document.getElementById("num4").value),parseInt(document.getElementById("num5").value)];
+        for(var i = 0; i<a.length-1;i++){
+            var min = a[i];
+            var k = i;
+        for(var j = i+ 1; j<a.length;j++){
+            if(min >a[j]){
+                min = a[j];
+                k = j;
+        }
+        }
+            var tmp = a[i];
+                a[i] = a[k];
+                a[k] = tmp;
+            document.getElementById("output").innerHTML = a;
+        }
+        }
+    </script>
+</body>
+</html>

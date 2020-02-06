@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="quicksort.js"></script>
+    <title>Quick Sort</title>
+</head>
+<body>
+    <div id="div_qs_input"></div>
+        <h3>
+            <input type="var" id="qs_array" value="5,3,7,6,2,9,11,-1,0">
+        </h3>
+        <button onclick="quickSort();">Quick Sort</button>
+        <h3 id="qs_output"></h3>
+    </div>
+
+    <div id="div_qs_text">
+        <h1>Quick Sort</h1>
+        <p>
+            Like Merge sort, Quick sort also falls into the category of divide and conquer approach of problem-solving methodology, but with the definition of a pivot value.
+            QuickSort is one of the most efficient sorting algorithms and is based on the splitting of an array into smaller ones. The name comes from the fact that, quick sort is capable of sorting a list of data elements significantly faster than any of the common sorting algorithms.
+        </p>
+        <h3>How Quick Sort works</h3>
+        <p>
+            Step 1: Select an element which is to be called as pivot element. Usually the pivot is the last or the middle item of the array.
+            Step 2: Compare all array elements with the selected pivot element and arrange them in such a way that, elements less than the pivot element are to it's left and greater than pivot is to it's right.
+            Step 3: Finally, perform the same operations on left and right side elements to the pivot element.
+        </p>
+        <img src="quicksort_example.png" alt="quicksort_example">
+    </div>  
+</body>
+</html>
