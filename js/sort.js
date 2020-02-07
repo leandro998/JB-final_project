@@ -7,8 +7,8 @@ function section_bubbleSort() {
 
         let n = arr.length;
 
-        for (let i = 0; i < n - 1; i++) {
-            for (let j = 0; j <= n - i - 1; j++) {
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j <= n; j++) {
                 if (arr[j] > arr[j + 1]) {
                     [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
                 }
@@ -16,11 +16,11 @@ function section_bubbleSort() {
         }
         return arr;
     }
-    let user_input = document.getElementById('bubble_sort_input').value
+    let user_input = document.getElementById('bb_array_input').value
     let numbers = user_input.split(',').map(elem => parseInt(elem, 10))
         // first call to bubble sort
     let sortedArray = bubbleSort(numbers)
-    document.getElementById('bubble_output').innerHTML = "Result: " + sortedArray;
+    document.getElementById('bb_output').innerHTML = "Result: " + sortedArray;
     // console.log(sortedArray);
 }
 
@@ -132,8 +132,11 @@ function Insertion_Sort(arr) {
     if (arr[i] < arr[0]) {
       //move current element to the first position
       arr.unshift(arr.splice(i, 1)[0]);
+      //unshift is prepend one or more elements to the array
+      //splice is delete old element while adding new element
     } else if (arr[i] > arr[i - 1]) {
-      continue; //leave current element where it is
+      continue; 
+      //leave current element where it is
     } else {
       //find where element should go
       for (let j = 1; j < i; j++) {
@@ -162,11 +165,12 @@ function callInsertionSort() {
 function Selection_Sort(arr, compare_Function) {
   function compare(a, b) {
     return a - b;
+    // subtract from a to b by comparison function
   }
   let min = 0;
   let index = 0;
   let temp = 0;
-  //{Function} compare_Function Compare function
+  //if either compare_Function or compare is true is true otherwise false
   compare_Function = compare_Function || compare;
   for (let i = 0; i < arr.length; i += 1) {
     index = i;
