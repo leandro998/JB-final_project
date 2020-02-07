@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/sort.css">
+    <script src="https://kit.fontawesome.com/849db05d92.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <title>JB-EXPERT</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_bar">
+            <div id="menu_bar">
+                <div id="menu" onclick="menu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav" id="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./bubble.html">Buble Sort</a></li>
+                <li><a href="#">Merge Sort</a></li>
+                <li><a href="#">Quick Sort</a></li>
+                <li><a href="#">Insert Sort</a></li>
+                <li><a href="#">Selection Sort</a></li>
+            </ul>
+            <div class="menu_bg" id="menu_bg"></div>
+        </div>
+        <div class="title_home">
+            <h1>JB-EXPERT</h1>
+        </div>    
+    </nav>
+    <section class=box_sort_content>
+        <div class="sort_content">
+            <h2>Bubble Sort</h2>
+            <p>It is the sorting algorithm that performs by repeated sorts of an array element by comparing the adjacent elements. It compares the adjacent element and it swaps the element if they are in the wrong order. This algorithm runs repeatedly until all the elements in the lists are sorted. If all the elements sorted in the list, then the algorithms end automatically. Although the bubble sort algorithm is simple, it consumes more time comparing other sorting techniques.</p><br><br>
+            <h3>How does Bubble Sort works?</h3><br>
+            <p>Step1: The first step of Bubble sort is to compare the first two elements, and swaps if they are in the wrong order. Since, these elements are already in order, algorithm does not swap numbers.</p><br>
+            <p>Step2: After the array is already sorted, the algorithm needs one whole pass without any swap to know it is sorted.</p>
+            <div class="sort_img">
+                <img src="./images/bubblesort_photo.png" alt="tutorial">
+            </div>
+            <div class="test_sortCode">
+                <h3>Type a random array separated by comma !</h3>
+                <input type="text" name="Bubble Sort" id="bubble_sort_input">
+                <button onclick="section_bubbleSort();">Click Here</button>
+            </div>
+            <div class="sort_output">
+                <textarea class="output" name="output" id="bubble_output"></textarea>
+            </div>
+            <div class="youtube_video">
+                <iframe src="https://www.youtube.com/embed/T761Ykas7Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>NOTICE! This content is copyright from this address: https://www.interviewbit.com/tutorial/selection-sort/</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <h3>JB-EXPERT Web Site copyright &copy; 2020</h3>
+        </div>
+    </footer>
+</body>
+<script src="./jb.js"></script>
+<script src="./sort.js"></script>
+</html>
