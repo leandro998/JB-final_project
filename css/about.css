@@ -362,15 +362,14 @@ h2{
 }
 
 .banner2_img {
-    top:30%;
-    left:-8%;
-    width: 120vw;
+    top:50%;
+    left:50%;
+    width: 80vw;
     height: auto;
     display:none;
     position: absolute;
     border-radius: 50px;
     transform: translate(-50%, -50%);
-    transform: rotate(35deg);
     animation-name: banner;
     animation-duration: 8s;
     transition: ease;
@@ -401,17 +400,11 @@ h2{
 }
 
 .sort_content {
-    /* position: relative;
-    top:53%;
-    left:50%;
-    transform: translate(-50%, -50%);     */
     width:65vw;
     height:auto;
     background-color: #fff;
     border: #636363 1px solid;
     margin: 50px 0;
-   
-
 }
 
 .sort_content img {
@@ -423,6 +416,10 @@ iframe {
     width:30vw;
     height:40vh;
 }
+
+/*#############################*/
+/*####HERE START FOR MOBILE####*/
+/*#############################*/
 
 @media all and (max-width: 650px){
     body {
@@ -453,14 +450,14 @@ iframe {
             font-size: 2vw;
         }
         to {
-            transform: translatey(670px);
-            font-size: 6vw;
+            transform: translateY(600px);
+            font-size: 4vw;
         }
     }
 
     .title_home{
-        transform: translatey(670px);
-        font-size: 6vw;
+        transform: translatey(600px);
+        font-size: 4vw;
         z-index: 1000;
     }
 
@@ -487,10 +484,10 @@ iframe {
 
     @keyframes banner {
         from { 
-            transform: translateX(-500px) rotate(35deg);
+            transform: translateX(-500px);
         }
         to {
-            transform: translateX(0px) rotate(35deg);
+            transform: translate(-50% -50%);
         };
 
     }
@@ -510,10 +507,11 @@ iframe {
         font-size: 4vw;
     }
     .btn_box1, .btn_box2 {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        margin-top: 2vh;
     }
     .btn_box1 a:hover, .btn_box2 a:hover {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .btn_content_box1 p, .btn_content_box2 p {
