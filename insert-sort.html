@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/sort.css">
+    <script src="https://kit.fontawesome.com/849db05d92.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <title>JB-EXPERT</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_bar">
+            <div id="menu_bar">
+                <div id="menu" onclick="menu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav" id="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./bubble-sort.html">Buble Sort</a></li>
+                <li><a href="./merge-sort.html">Merge Sort</a></li>
+                <li><a href="./quick-sort.html">Quick Sort</a></li>
+                <li><a href="./insert-sort.html">Insert Sort</a></li>
+                <li><a href="./selection-sort.html">Selection Sort</a></li>
+            </ul>
+            <div class="menu_bg" id="menu_bg"></div>
+        </div>
+        <div class="title_home">
+            <h1>JB-EXPERT</h1>
+        </div>
+        <div class="users">
+            <img src="./images/user_1.svg" alt="users">
+        </div>   
+    </nav>
+    <section class=box_sort_content>
+        <div class="sort_content">
+            <h2>Insert Sort</h2>
+            <p>
+                Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+            </p><br><br>
+            <h3>How does Insert Sort works?</h3><br>
+            <p>
+                Step1: From the top, the first two elements are sorted and compared.
+            </p><br>
+            <p>
+                Step2: If the first element is larger than the second element then change the locations.
+            </p><br>
+            <p>
+                Step3: Next, compare the third element with the two sorted elements and insert them at the appropriate locations.
+            </p><br>
+            <p>
+                Step4: After that, the same process is repeated until the end.
+            </p>
+            <div class="sort_img">
+                <img src="./images/insertion-sort.png" alt="tutorial">
+            </div>
+            <div class="test_sortCode">
+                <h3>Type a random array separated by comma !</h3>
+                <input type="text" name="Bubble Sort" id="is_array_input">
+                <button onclick="callInsertionSort();">Click Here</button>
+            </div>
+            <div class="sort_output">
+                <h3 name="output" id="is_output"> </h3>
+            </div>
+            <div class="youtube_video">
+                <iframe src="https://www.youtube.com/embed/i-SKeOcBwko" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="advice">
+                <p>NOTICE! This content is copyright from this address:</p>
+                <a href="https://www.interviewbit.com/tutorial/selection-sort">https://www.interviewbit.com/</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <h3>JB-EXPERT Web Site copyright &copy; 2020</h3>
+        </div>
+    </footer>
+</body>
+<script src="./js/jb.js"></script>
+<script src="./js/sort.js"></script>
+</html>
+

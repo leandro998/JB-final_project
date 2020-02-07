@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/sort.css">
+    <script src="https://kit.fontawesome.com/849db05d92.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <title>JB-EXPERT</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_bar">
+            <div id="menu_bar">
+                <div id="menu" onclick="menu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+            <ul class="nav" id="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./bubble-sort.html">Buble Sort</a></li>
+                <li><a href="./merge-sort.html">Merge Sort</a></li>
+                <li><a href="./quick-sort.html">Quick Sort</a></li>
+                <li><a href="./insert-sort.html">Insert Sort</a></li>
+                <li><a href="./selection-sort.html">Selection Sort</a></li>
+            </ul>
+            <div class="menu_bg" id="menu_bg"></div>
+        </div>
+        <div class="title_home">
+            <h1>JB-EXPERT</h1>
+        </div>
+        <div class="users">
+            <img src="./images/user_1.svg" alt="users">
+        </div>   
+    </nav>
+    <section class=box_sort_content>
+        <div class="sort_content">
+            <h2>Selection Sort</h2>
+            <p>
+                Selection sort is one of the sorting algorithms. Search for the maximum or minimum value from the arrayed elements and replace them with the last element in the array.
+            </p><br><br>
+            <h3>How does Selection Sort works?</h3><br>
+            <p>
+                Step1: The first element of the list is the temporary maximum value.
+            </p><br>
+            <p>
+                Step2: Look at the second and subsequent elements one by one, and if they are greater than the tentative maximum, remember that number.
+            </p><br>
+            <p>
+                Step3: After the process has been completed, if there is a second or subsequent one that is equal to or smaller than the provisional minimum value, the element is replaced with the first element.
+            </p><br>
+            <p>
+                Step4: After that, the same process is repeated until the end.
+            </p>
+            <div class="sort_img">
+                <img src="./images/selection-sort.png" alt="tutorial">
+            </div>
+            <div class="test_sortCode">
+                <h3>Type a random array separated by comma !</h3>
+                <input type="text" name="Selection Sort" id="sl_input">
+                <button onclick="callSelectionSort();">Click Here</button>
+            </div>
+            <div class="sort_output">
+                <h3 name="output" id="sl_output"> </h3>
+            </div>
+            <div class="youtube_video">
+                <iframe src="https://www.youtube.com/embed/teTSnpaaYZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="advice">
+                <p>NOTICE! This content is copyright from this address:</p>
+                <a href="https://www.interviewbit.com/tutorial/selection-sort">https://www.interviewbit.com/</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <h3>JB-EXPERT Web Site copyright &copy; 2020</h3>
+        </div>
+    </footer>
+</body>
+<script src="./js/jb.js"></script>
+<script src="./js/sort.js"></script>
+</html>
+

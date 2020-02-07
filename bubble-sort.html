@@ -22,25 +22,34 @@
             <ul class="nav" id="nav">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li><a href="./bubble.html">Buble Sort</a></li>
-                <li><a href="#">Merge Sort</a></li>
-                <li><a href="#">Quick Sort</a></li>
-                <li><a href="#">Insert Sort</a></li>
-                <li><a href="#">Selection Sort</a></li>
+                <li><a href="./bubble-sort.html">Buble Sort</a></li>
+                <li><a href="./merge-sort.html">Merge Sort</a></li>
+                <li><a href="./quick-sort.html">Quick Sort</a></li>
+                <li><a href="./insert-sort.html">Insert Sort</a></li>
+                <li><a href="./selection-sort.html">Selection Sort</a></li>
             </ul>
             <div class="menu_bg" id="menu_bg"></div>
         </div>
         <div class="title_home">
             <h1>JB-EXPERT</h1>
-        </div>    
+        </div>
+        <div class="users">
+            <img src="./images/user_1.svg" alt="users">
+        </div>   
     </nav>
     <section class=box_sort_content>
         <div class="sort_content">
             <h2>Bubble Sort</h2>
-            <p>It is the sorting algorithm that performs by repeated sorts of an array element by comparing the adjacent elements. It compares the adjacent element and it swaps the element if they are in the wrong order. This algorithm runs repeatedly until all the elements in the lists are sorted. If all the elements sorted in the list, then the algorithms end automatically. Although the bubble sort algorithm is simple, it consumes more time comparing other sorting techniques.</p><br><br>
+            <p>
+                It is the sorting algorithm that performs by repeated sorts of an array element by comparing the adjacent elements. It compares the adjacent element and it swaps the element if they are in the wrong order. This algorithm runs repeatedly until all the elements in the lists are sorted. If all the elements sorted in the list, then the algorithms end automatically. Although the bubble sort algorithm is simple, it consumes more time comparing other sorting techniques.
+            </p><br><br>
             <h3>How does Bubble Sort works?</h3><br>
-            <p>Step1: The first step of Bubble sort is to compare the first two elements, and swaps if they are in the wrong order. Since, these elements are already in order, algorithm does not swap numbers.</p><br>
-            <p>Step2: After the array is already sorted, the algorithm needs one whole pass without any swap to know it is sorted.</p>
+            <p>
+                Step1: The first step of Bubble sort is to compare the first two elements, and swaps if they are in the wrong order. Since, these elements are already in order, algorithm does not swap numbers.
+            </p><br>
+            <p>
+                Step2: After the array is already sorted, the algorithm needs one whole pass without any swap to know it is sorted.
+            </p>
             <div class="sort_img">
                 <img src="./images/bubblesort_photo.png" alt="tutorial">
             </div>
@@ -50,11 +59,14 @@
                 <button onclick="section_bubbleSort();">Click Here</button>
             </div>
             <div class="sort_output">
-                <textarea class="output" name="output" id="bubble_output"></textarea>
+                <h3 name="output" id="bubble_output"> </h3>
             </div>
             <div class="youtube_video">
                 <iframe src="https://www.youtube.com/embed/T761Ykas7Og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>NOTICE! This content is copyright from this address: https://www.interviewbit.com/tutorial/selection-sort/</p>
+            </div>
+            <div class="advice">
+                <p>NOTICE! This content is copyright from this address:</p>
+                <a href="https://www.interviewbit.com/tutorial/selection-sort">https://www.interviewbit.com/</a>
             </div>
         </div>
     </section>
@@ -64,6 +76,7 @@
         </div>
     </footer>
 </body>
-<script src="./jb.js"></script>
-<script src="./sort.js"></script>
+<script src="./js/jb.js"></script>
+<script src="./js/sort.js"></script>
 </html>
+
